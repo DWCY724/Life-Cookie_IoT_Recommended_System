@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FireBase_and_Similarity_Service">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et1"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:hint="@string/enter_first_word"
+        android:textColorHint="@android:color/holo_blue_bright"/>
+    <EditText
+        android:layout_below="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et2"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:hint="@string/enter_second_word"
+        android:textColorHint="@android:color/holo_blue_bright"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="@string/submit"
+        android:layout_below="@+id/et2"
+        android:layout_margin="20dp"
+        android:padding="20dp"/>
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn"
+        android:textSize="30sp"
+        android:text=""
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+</RelativeLayout>

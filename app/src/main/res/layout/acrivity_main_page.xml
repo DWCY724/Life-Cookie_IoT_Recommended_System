@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--寫在Main_Page.java-->
+    <!--要將日曆跟悠遊卡寫進背景，定時間-->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Recommendation Item"
+            android:layout_marginTop="5dp"
+            android:background="#97847c"
+            android:textColor="#f0e4d4"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="108dp"
+            android:layout_marginLeft="108dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/style2"
+            android:gravity="center"
+            android:textColor="#f0e4d4"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/item_pic"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/image_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Link-->
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/linearLayout1"
+            app:layout_constraintEnd_toEndOf="@id/linearLayout1"
+            app:layout_constraintTop_toTopOf="@id/linearLayout1">
+
+            <Button
+                android:id="@+id/item_Like"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/style2"
+                android:gravity="center"
+                android:textColor="#f0e4d4"
+                android:text="Like"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/item_Dislike"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/style2"
+                android:gravity="center"
+                android:textColor="#f0e4d4"
+                android:text="Dislike"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:text="點此查看更多商品"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/Button_Color"
+            android:textSize="15sp" />
+        <!--手錶官方Sample-->
+        <!--tvStatus: 沒有空間顯示-->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Physiological Data from Watch"
+            android:layout_marginTop="5dp"
+            android:background="#97847c"
+            android:textColor="#f0e4d4"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ListView
+            android:id="@+id/lvMessage"
+            android:layout_width="wrap_content"
+            android:background="#d1ac9e"
+            android:layout_marginTop="3dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </ListView>
+
+        <TextView
+            android:id="@+id/Terminal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:textAppearance="?android:textAppearanceLarge" />
+        <!--手錶官方Sample必放-->
+        <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context=".MapsActivityCurrentPlace"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" />
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#a52a2a	"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="@id/linearLayout2"
+            app:layout_constraintTop_toTopOf="@id/linearLayout2">
+
+            <!--activity_maps、connect_watch我還在想怎麼展現，這兩個按鈕我會寫-->
+            <!--connect_watch-->
+            <ToggleButton
+                android:id="@+id/buttonConnect"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textOff=""
+                android:textOn=""
+                android:onClick="OnClickWatch"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/watch4" />
+            <!--activity_analysis-->
+            <Button
+                android:id="@+id/analysis"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:onClick="OnClick"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/analysis4" />
+
+            <!--activity_person-->
+            <Button
+                android:id="@+id/personal_center"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:onClick="OnClick"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/me3" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--寫在activity_analysis.java-->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/analysis_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Recommended analysis"
+            android:layout_marginTop="5dp"
+            android:background="#97847c"
+            android:textColor="#f0e4d4"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="108dp"
+            android:layout_marginLeft="108dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style2"
+            android:gravity="center"
+            android:text="TAG"
+            android:textColor="#fce9da"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/TAG"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="300dp"
+            android:background="@drawable/arrow5" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="108dp"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style2"
+            android:gravity="center"
+            android:text="Random1"
+            android:textColor="#fce9da"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/RC1"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/RV1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="108dp"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="300dp"
+            android:background="@drawable/arrow5" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="108dp"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style2"
+            android:gravity="center"
+            android:text="Random2"
+            android:textColor="#fce9da"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/RC2"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/RV2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="108dp"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/arrow4" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="108dp"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style2"
+            android:gravity="center"
+            android:text="Item"
+            android:textColor="#fce9da"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/item"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="108dp"
+            android:layout_marginRight="108dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

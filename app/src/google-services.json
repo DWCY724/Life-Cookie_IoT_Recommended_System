@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "733152053512",
+    "firebase_url": "https://my-project-184b3-default-rtdb.firebaseio.com",
+    "project_id": "my-project-184b3",
+    "storage_bucket": "my-project-184b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733152053512:android:fc2ce2b856c9863c2204bd",
+        "android_client_info": {
+          "package_name": "com.example.my_recommended_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733152053512-fkbt9lai75vbbcm0ejnee2jqgfpi47qg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samsung.android.sdk.accessory.example.consumer",
+            "certificate_hash": "55ad8bce6ebb8215183b6545d248adc8c4bc5477"
+          }
+        },
+        {
+          "client_id": "733152053512-1pd2hr0akg0mi633b7c1tl9qk6dvprgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjMa_0JD94UwfNZps-5-ZG7Oh4M782ydw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733152053512-1pd2hr0akg0mi633b7c1tl9qk6dvprgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733152053512:android:c9fdb9fcdfcaf1672204bd",
+        "android_client_info": {
+          "package_name": "com.samsung.android.sdk.accessory.example.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733152053512-1pd2hr0akg0mi633b7c1tl9qk6dvprgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjMa_0JD94UwfNZps-5-ZG7Oh4M782ydw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733152053512-1pd2hr0akg0mi633b7c1tl9qk6dvprgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733152053512:android:5a293a618ba383752204bd",
+        "android_client_info": {
+          "package_name": "com.samsung.android.sdk.accessory.example.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733152053512-1pd2hr0akg0mi633b7c1tl9qk6dvprgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjMa_0JD94UwfNZps-5-ZG7Oh4M782ydw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733152053512-1pd2hr0akg0mi633b7c1tl9qk6dvprgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

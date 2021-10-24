@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/front_page"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="370dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="370dp"
+            android:background="@drawable/bottom_1"
+            android:onClick="mOnClickMain"
+            android:text="@string/login"
+            android:textColor="@color/Background" />
+
+        <Button
+            android:id="@+id/register"
+            android:text="@string/register"
+            android:layout_width="370dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bottom_2"
+            android:onClick="mOnClickMain"
+            android:textColor="@color/Background"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
