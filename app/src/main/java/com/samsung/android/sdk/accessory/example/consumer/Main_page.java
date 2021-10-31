@@ -113,7 +113,7 @@ public class Main_page extends AppCompatActivity
         implements OnMapReadyCallback {
     TextView tv;
     ImageView imageView;
-    Button Btn1, Btn2, Bt_analysis, Bt_personal_center;
+    Button Btn1, Btn2, Bt_analysis, Bt_personal_center, Bt_more;
     int total_recommend = 1;
     int sim_total_recommend = 1;
     int random_total_recommend = 0;
@@ -186,6 +186,7 @@ public class Main_page extends AppCompatActivity
         imageView = (ImageView)findViewById(R.id.item_pic);
         Bt_analysis = (Button)findViewById(R.id.analysis);
         Bt_personal_center = (Button) findViewById(R.id.personal_center);
+        Bt_more =(Button) findViewById(R.id.more);
         //tool---------------------------------------------------------------------------------------------------------------------------
         //Watch Initialize
         InitializeAccessory();
@@ -204,7 +205,7 @@ public class Main_page extends AppCompatActivity
         verifyStoragePermissions(this);
         read();
 
-        /*
+
         //Google Calendar
         mContext=this;
         // Internet Tread
@@ -219,7 +220,7 @@ public class Main_page extends AppCompatActivity
             e.printStackTrace();
         }
 
-         */
+
         //tool end---------------------------------------------------------------------------------------------------------------------------
 
         /*
@@ -536,6 +537,29 @@ public class Main_page extends AppCompatActivity
 
                                 //show picture
                                 downloadwithbyte(final_item);
+
+                                //check more item -> to amazon
+                                Bt_more.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        FirebaseDatabase more_item = FirebaseDatabase.getInstance("https://more-information-item-urls.firebaseio.com/");
+                                        DatabaseReference more_ref = more_item.getReference(final_item);
+                                        more_ref.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                String more_url = snapshot.getValue().toString();
+                                                Uri uri = Uri.parse(more_url);//要跳轉的網址
+                                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                                startActivity(intent);
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                            }
+                                        });
+                                    }
+                                });
                                 /*
                                     // Reference to an image file in Cloud Storage
                                     FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -821,6 +845,29 @@ public class Main_page extends AppCompatActivity
                                                 //show picture
                                                 downloadwithbyte(final_item);
 
+                                                //check more item -> to amazon
+                                                Bt_more.setOnClickListener(new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View view) {
+                                                        FirebaseDatabase more_item = FirebaseDatabase.getInstance("https://more-information-item-urls.firebaseio.com/");
+                                                        DatabaseReference more_ref = more_item.getReference(final_item);
+                                                        more_ref.addValueEventListener(new ValueEventListener() {
+                                                            @Override
+                                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                                String more_url = snapshot.getValue().toString();
+                                                                Uri uri = Uri.parse(more_url);//要跳轉的網址
+                                                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                                                startActivity(intent);
+                                                            }
+
+                                                            @Override
+                                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                                            }
+                                                        });
+                                                    }
+                                                });
+
                                             }
                                             @Override
                                             public void onCancelled(DatabaseError error_data) {
@@ -1060,6 +1107,29 @@ public class Main_page extends AppCompatActivity
 
                                             //show picture
                                             downloadwithbyte(final_item);
+
+                                            //check more item -> to amazon
+                                            Bt_more.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View view) {
+                                                    FirebaseDatabase more_item = FirebaseDatabase.getInstance("https://more-information-item-urls.firebaseio.com/");
+                                                    DatabaseReference more_ref = more_item.getReference(final_item);
+                                                    more_ref.addValueEventListener(new ValueEventListener() {
+                                                        @Override
+                                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                            String more_url = snapshot.getValue().toString();
+                                                            Uri uri = Uri.parse(more_url);//要跳轉的網址
+                                                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                                            startActivity(intent);
+                                                        }
+
+                                                        @Override
+                                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                                        }
+                                                    });
+                                                }
+                                            });
 
                                         }
                                         @Override
@@ -1331,6 +1401,29 @@ public class Main_page extends AppCompatActivity
                                                 //show picture
                                                 downloadwithbyte(final_item);
 
+                                                //check more item -> to amazon
+                                                Bt_more.setOnClickListener(new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View view) {
+                                                        FirebaseDatabase more_item = FirebaseDatabase.getInstance("https://more-information-item-urls.firebaseio.com/");
+                                                        DatabaseReference more_ref = more_item.getReference(final_item);
+                                                        more_ref.addValueEventListener(new ValueEventListener() {
+                                                            @Override
+                                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                                String more_url = snapshot.getValue().toString();
+                                                                Uri uri = Uri.parse(more_url);//要跳轉的網址
+                                                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                                                startActivity(intent);
+                                                            }
+
+                                                            @Override
+                                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                                            }
+                                                        });
+                                                    }
+                                                });
+
                                             }
                                             @Override
                                             public void onCancelled(DatabaseError error_data) {
@@ -1568,6 +1661,29 @@ public class Main_page extends AppCompatActivity
                                             //show picture
                                             downloadwithbyte(final_item);
 
+                                            //check more item -> to amazon
+                                            Bt_more.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View view) {
+                                                    FirebaseDatabase more_item = FirebaseDatabase.getInstance("https://more-information-item-urls.firebaseio.com/");
+                                                    DatabaseReference more_ref = more_item.getReference(final_item);
+                                                    more_ref.addValueEventListener(new ValueEventListener() {
+                                                        @Override
+                                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                            String more_url = snapshot.getValue().toString();
+                                                            Uri uri = Uri.parse(more_url);//要跳轉的網址
+                                                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                                            startActivity(intent);
+                                                        }
+
+                                                        @Override
+                                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                                        }
+                                                    });
+                                                }
+                                            });
+
                                         }
                                         @Override
                                         public void onCancelled(DatabaseError no_sim_error_data) {
@@ -1596,8 +1712,10 @@ public class Main_page extends AppCompatActivity
     }
 
     public void downloadwithbyte(String item){
+
         StringBuffer url = new StringBuffer("picture/");
         url.append(item);
+        url.append(".jpg");
         StorageReference imgRef = storageReference.child(String.valueOf(url));
 
         long MaxByte = 1024*1024;
@@ -1824,6 +1942,20 @@ public class Main_page extends AppCompatActivity
             Log.e("Now: ", String.valueOf(R.id.option_get_place));
             Log.e("Now: ", "Call showCurrentPlace()");
             showCurrentPlace();
+        }
+        else if(item.getItemId() == R.id.Restart) {
+            //Google Calendar & Easy Card
+            try {
+                verifyStoragePermissions(this);
+                main();
+                read();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (GeneralSecurityException e) {
+                e.printStackTrace();
+            }
+            //推薦
+            recommend_item();
         }
         return true;
     }
