@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 public class Analysis extends Activity {
-    TextView TAG, RC1, RV1, RC2, RV2;
+    TextView TAG, RC1, RV1, RC2, RV2, Item;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class Analysis extends Activity {
         RC2 = (TextView) findViewById(R.id.RC2);
         RV1 = (TextView) findViewById(R.id.RV1);
         RV2 = (TextView) findViewById(R.id.RV2);
+        Item = (TextView) findViewById(R.id.item);
 
         Bundle bundle = getIntent().getExtras();
         String tag_val = bundle.getString("tag_val");
@@ -32,5 +33,6 @@ public class Analysis extends Activity {
         RV1.setText(rv1_val);
         RC2.setText(rc2_val);
         RV2.setText(rv2_val);
+        Item.setText(rc2_val);
     }
 }

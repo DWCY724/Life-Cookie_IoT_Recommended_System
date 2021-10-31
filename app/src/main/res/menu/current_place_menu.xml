@@ -15,10 +15,12 @@
     <item
         android:id="@+id/option_get_place"
         android:title="@string/option_get_place"
+        android:icon="@drawable/map4"
         app:showAsAction="always"/>
     <item
         android:id="@+id/Restart"
         android:title="Restart"
+        android:icon="@drawable/restart"
         android:orderInCategory="100"
         app:showAsAction="always" />
 </menu>
